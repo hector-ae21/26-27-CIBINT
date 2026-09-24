@@ -26,23 +26,23 @@ Tienes comité **a las 13:00** y debes llegar con una recomendación. Estas son 
 
 ## El material
 
-| Archivo | Contenido |
-|---|---|
-| [cronologia-inicial.csv](datos/cronologia-inicial.csv) | `C01`–`C14`. Hechos públicos **hasta el 20 de julio**, cuando te llega la petición |
-| [cronologia-posterior.csv](datos/cronologia-posterior.csv) | `C15`–`C25`. Hechos públicos **publicados después** |
+| Archivo                                                        | Contenido                                                                                                              |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| [cronologia-inicial.csv](datos/cronologia-inicial.csv)         | `C01`–`C14`. Hechos públicos **hasta el 20 de julio**, cuando te llega la petición                                     |
+| [cronologia-posterior.csv](datos/cronologia-posterior.csv)     | `C15`–`C25`. Hechos públicos **publicados después**                                                                    |
 | [superficies-plataforma.csv](datos/superficies-plataforma.csv) | `S01`–`S10`. Qué partes tiene la plataforma, quién gestiona cada una y qué filas de la cronología inicial la mencionan |
-| [fuentes.csv](datos/fuentes.csv) | `F01`–`F12`. Las fuentes de donde sale cada hecho |
+| [fuentes.csv](datos/fuentes.csv)                               | `F01`–`F12`. Las fuentes de donde sale cada hecho                                                                      |
 
 **Campos de las cronologías**
 
-| Campo | Qué contiene |
-|---|---|
-| `id` | Identificador del hecho, `C01`–`C25` |
-| `fecha` | Fecha de publicación o de ocurrencia declarada |
-| `actor` | Quién lo afirma o de quién trata |
-| `tipo` | `declaracion_oficial`, `cobertura`, `antecedente` o `cronologia` |
-| `contenido` | El hecho, sin interpretación añadida |
-| `fuente_ref` | Enlaza con `fuentes.csv` |
+| Campo           | Qué contiene                                                                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`            | Identificador del hecho, `C01`–`C25`                                                                                                                                      |
+| `fecha`         | Fecha de publicación o de ocurrencia declarada                                                                                                                            |
+| `actor`         | Quién lo afirma o de quién trata                                                                                                                                          |
+| `tipo`          | `declaracion_oficial`, `cobertura`, `antecedente` o `cronologia`                                                                                                          |
+| `contenido`     | El hecho, sin interpretación añadida                                                                                                                                      |
+| `fuente_ref`    | Enlaza con `fuentes.csv`                                                                                                                                                  |
 | `corroboracion` | `una_parte` si lo afirma solo una de las organizaciones implicadas · `prensa` si lo publica un medio sin aportar verificación propia · `dos_partes` si lo afirman las dos |
 
 **Campos de las superficies**
@@ -81,13 +81,13 @@ Debes acompañar cada afirmación que hagas con el identificador del que sale, e
 
 **1.1.** Clasifica cada frase como **dato**, **información**, **inteligencia** o **ninguna de las tres**, con una línea de justificación.
 
-| | Frase |
-|---|---|
-| **A** | «El 16 de julio la plataforma publicó que había detectado un acceso no autorizado a su infraestructura de producción.» |
-| **B** | «No hay responsable identificado ni se conoce el modelo que operaba el marco de agentes.» |
+|       | Frase                                                                                                                                                                                                                                                            |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | «El 16 de julio la plataforma publicó que había detectado un acceso no autorizado a su infraestructura de producción.»                                                                                                                                           |
+| **B** | «No hay responsable identificado ni se conoce el modelo que operaba el marco de agentes.»                                                                                                                                                                        |
 | **C** | «El acceso inicial entró por el procesamiento de conjuntos de datos y la propia plataforma declara verificada como no comprometida su cadena de suministro de software: el problema se concentra en sus sistemas internos, no en los artefactos que distribuye.» |
-| **D** | «Como no hay evidencia de manipulación de los artefactos públicos, los modelos que ya hemos descargado son seguros.» |
-| **E** | «Es probable que el riesgo inmediato esté en nuestras credenciales de la plataforma y no en los modelos ya descargados; conviene rotarlas antes del comité y mantener las descargas bajo observación.» |
+| **D** | «Como no hay evidencia de manipulación de los artefactos públicos, los modelos que ya hemos descargado son seguros.»                                                                                                                                             |
+| **E** | «Es probable que el riesgo inmediato esté en nuestras credenciales de la plataforma y no en los modelos ya descargados; conviene rotarlas antes del comité y mantener las descargas bajo observación.»                                                           |
 
 **1.2.** Formula ahora un dato, una información y una inteligencia propios a partir del material. La **información** debe combinar al menos dos filas **de archivos distintos** (por ejemplo, una superficie y un hecho de la cronología). La **inteligencia** debe servirte para elegir entre las opciones del comité.
 
