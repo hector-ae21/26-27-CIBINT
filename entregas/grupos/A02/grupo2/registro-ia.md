@@ -1,30 +1,28 @@
 # Registro de uso de inteligencia artificial · Grupo 2
 
-> **Registro de IA del grupo 2 · actividad A02.**
->
-> Este archivo es el registro de tu grupo. **Se trabaja directamente sobre él** y se entrega junto con el plan de investigación.
->
-> **Cómo se rellena:**
->
-> 1. Cada vez que alguien del grupo use IA, copia el bloque «Uso 1» y rellénalo con el número siguiente.
-> 2. Como evidencia, guarda una captura o exportación en la carpeta `ia/` con el número del uso (`uso-01.png`, `uso-02.pdf`…), o pega el enlace para compartir la conversación.
-> 3. Si el grupo no ha usado IA, borra el bloque y escribe: «No hemos utilizado inteligencia artificial».
->
-> Nivel C: la IA puede usarse para explorar, buscar ideas, aclarar conceptos o revisar la ortografía. No puede redactar el plan ni tomar sus decisiones. No se introducen datos personales.
->
-> Borra este recuadro antes de entregar.
-
 ## Uso 1
 
-- **Quién:**
-- **Herramienta:**
-- **Para qué:** explorar el caso / buscar ideas / aclarar un concepto / revisar la ortografía
-- **Apartado del plan:**
+- **Quién:** Sergio Rodríguez
+- **Herramienta:** Claude (claude.ai, modelo Sonnet 3.5)
+- **Para qué:** revisar la ortografía y dar formato estructural al borrador inicial volcándolo en la plantilla oficial de Markdown.
+- **Apartado del plan:** Todos los apartados (1 al 11)
 - **Prompt, copiado tal cual:**
 
+  *(Se adjuntó el archivo local `Borrador_Investigacion_Naturgy.md`)*
+  
   ```text
+  Actúa como un experto analista de ciberinteligencia y redactor académico. A continuación te proporcionaré un "borrador de apuntes" creado por un grupo de estudiantes universitarios sobre un plan de investigación del caso "Filtración de Naturgy".
 
-  ```
+  Tu tarea es tomar este borrador y redactar el "Plan de Investigación Final", volcando la información en una plantilla estructurada en formato Markdown. El documento final debe tener un tono riguroso, aséptico, profesional y metodológico.
 
-- **Qué hicimos con la respuesta:** qué usamos, qué descartamos y qué comprobamos
-- **Evidencia:** `ia/uso-01.png` o enlace a la conversación
+  Sigue estas directrices obligatorias:
+  1. Mantén la estructura de la plantilla con los apartados del 1 al 11 (Ficha, Resumen, Situación, Necesidad de Inteligencia, Legitimación, Plan de Obtención, Reglas, Tratamiento de Datos, Seguridad/OPSEC, Trazabilidad, Alcance, Fuentes y Equipo).
+  2. Transforma los apuntes informales en tablas estructuradas donde corresponda (especialmente en los hechos confirmados, lagunas de conocimiento, plan de obtención y evaluaciones de licitud).
+  3. Utiliza terminología técnica adecuada a la disciplina de inteligencia (OSINT pasivo, Surface Web, firmas criptográficas SHA-256, minimización de datos, Protocolo de Berkeley, TLP:CLEAR, interés legítimo).
+  4. Cita las referencias legales correctamente cuando formalices el texto (ej. Artículo 197 del Código Penal, Reglamento General de Protección de Datos - RGPD).
+  5. Redacta las secciones de aportación individual en el Apartado "Equipo" en primera persona, manteniendo la formalidad y asignando exactamente las tareas descritas en el borrador a "José Luis de la Asunción", "Sergio Rodríguez" y "Alejandro Ateca".
+  6. No inventes procedimientos operativos que no estén sugeridos en el borrador; limítate a expandir, argumentar y dotar de formalidad técnica a los apuntes existentes.
+
+- **Qué hicimos con la respuesta:** Utilizamos la estructura generada en Markdown y la revisión ortotipográfica para volcar nuestro borrador a la plantilla oficial. Comprobamos minuciosamente que la IA no hubiera inventado ninguna evidencia, ni tomado decisiones operativas autónomas, ni alterado los riesgos de OPSEC que habíamos definido previamente en nuestras notas. Finalmente, descartamos y eliminamos los recuadros de instrucciones de la plantilla inicial como pedían las normas.
+
+- **Evidencia:** [uso-01.png](ia/uso-01.png)
