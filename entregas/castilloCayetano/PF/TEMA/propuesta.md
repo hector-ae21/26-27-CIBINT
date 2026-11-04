@@ -71,4 +71,14 @@ He leído las condiciones del proyecto. Esta propuesta no me autoriza a acceder 
 
 ## 8. Resolución de la propuesta
 
-*(Espacio reservado. No rellenar hasta recibir la evaluación del profesor. Una vez devuelta la corrección, se anotará aquí la fecha, las condiciones impuestas y la versión del alcance definitivamente aprobada).*
+**Fecha:** 4 de noviembre de 2026  
+**Resolución:** Necesita cambios. Reformula el alcance y entrégalo antes de empezar la recogida sistemática.  
+**Versión revisada:** 27 de octubre de 2026
+
+**Cambios necesarios:**
+
+1. **Objeto.** El «ecosistema de servidores expuestos» no es un objeto delimitado. Céntralo en las vulnerabilidades, en su ciclo de publicación, parche y evasión, y en lo que las fuentes documentan sobre el papel de la IA.
+2. **Preguntas.** PI-01 y PI-02 dan por hecho que la IA descubrió los fallos y aceleró la evasión. Formula primero qué fuentes lo afirman y con qué evidencia. PI-03 no puede comprobar si una configuración de `php.ini` es «efectiva»: pregunta qué mitigaciones recomiendan las fuentes oficiales y con qué limitaciones.
+3. **Corte de información.** El 27 de octubre es anterior al propio trabajo. Fija un corte compatible con los avances, por ejemplo el 30 de noviembre de 2026 a las 23:59, Europe/Madrid.
+4. **Referencias.** Añade fecha de consulta y fecha de publicación correctas a cada una, e incluye el aviso oficial del proyecto PHP como fuente primaria.
+5. **Modalidad.** Es un caso de vulnerabilidades públicas, no un incidente ni una exposición de una organización: indícalo así.
