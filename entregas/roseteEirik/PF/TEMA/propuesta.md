@@ -75,6 +75,11 @@ He leído las condiciones del proyecto. Esta propuesta no me autoriza a acceder 
 
 ## 8. Resolución de la propuesta
 
-[No completar como si fuera una aprobación. Después de recibirla, anota su fecha, las condiciones indicadas y la versión del alcance aprobada.]
+Fecha: 4 de noviembre de 2026
+Aprobada con condiciones
+
+1. Sustituye F-03: el enlace pasa por removepaywall.com, un servicio para eludir el muro de pago del medio. Eludir controles de acceso está prohibido por las normas de la asignatura. Cita la URL original del Irish Independent solo si puedes leerla legítimamente, o usa otra fuente de prensa de acceso abierto.
+2. Mantén las cifras de cancelaciones y del volumen exfiltrado como afirmaciones atribuidas a quien las hace, no como hechos, hasta contrastarlas.
+3. En P1, concreta en qué fecha y con qué fuentes revisarás cada pregunta.
 
 [Volver a tema y alcance](../01-tema-y-alcance.md) · [Calendario](../02-proceso-y-entregas.md)
