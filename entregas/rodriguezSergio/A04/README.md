@@ -26,30 +26,31 @@
 ### 2.1 Ficha del objetivo de la A03
 
 | Campo | Dato | Referencia | Entrada para |
-| :---- | :---- | :---- | :---- |
-| Nombre legal | AIR EUROPA LINEAS AEREAS S.A. | (A03 OBT-03) | Shodan (org) |
-| Dominios oficiales | `aireuropa.com` | (A03 OBT-01) | Shodan (hostname, ssl) y FOCA |
-| Canales de contacto | `delegadopd@aireuropa.com` | (A03 OBT-04) | Validación cruzada |
+| --- | --- | --- | --- |
+| Nombre legal | AIR EUROPA LINEAS AEREAS S.A. | (A03 OBT-03) | Referencia general |
+| Marcas | Air Europa, SUMA | (A03 OBT-01) | FOCA (metadatos de autoría) |
+| Dominios oficiales | `aireuropa.com`, `agencias.aireuropa.com` | (A03 OBT-01, OBT-05) | Shodan y FOCA |
+| Canales de contacto | `delegadopd@aireuropa.com` | (A03 OBT-04) | FOCA (búsqueda de correos) |
 
 ### 2.2 Requerimiento
 
 | Componente | Contenido |
-| :---- | :---- |
+| --- | --- |
 | Destinatario | Responsable de seguridad de la información (CISO) de Air Europa. |
-| Decisión | Determinar qué infraestructura subyacente y metadatos documentales son visibles públicamente y deben ser protegidos o sanitizados. |
-| Objeto | Huella técnica y documental de Air Europa. |
-| Horizonte | Corto plazo, informe de noviembre de 2026\. |
-| Alcance | Servicios asociados a los dominios corporativos (`aireuropa.com`) y documentos ofimáticos indexados en dicho dominio. |
-| Exclusiones | Escaneos activos, pruebas de vulnerabilidad, análisis de infraestructura sanitaria/transporte crítica (restricción estricta de Shodan). |
-| Producto | Informe técnico con registro de obtención, evidencias anonimizadas y recomendaciones defensivas. |
+| Decisión | Identificar qué servicios web/correo y metadatos documentales exponen información útil para un atacante, para aplicar medidas de bastionado y sanitización. |
+| Objeto | Huella técnica (servicios web y correo expuestos vinculados a dominios) y huella documental (metadatos en documentos ofimáticos publicados). |
+| Horizonte | Corto plazo (cierre de ejercicio 2026), orientado a subsanar vulnerabilidades operativas rápidas. |
+| Alcance | Dominios principales de Air Europa, limitando el descubrimiento de servicios estrictamente a consultas por certificado y *hostname* (sector transporte). Documentos PDF indexados en el dominio principal. |
+| Exclusiones | Análisis de vulnerabilidades específicas, comprobaciones activas (escaneos de red), consultas `org:` o `net:` en Shodan, e investigación de personas físicas. |
+| Producto | Informe técnico de exposición estructurado con evidencias anonimizadas y recomendaciones defensivas. |
 
 ### 2.3 Preguntas de inteligencia
 
 | Prioridad | Pregunta | Huella que cubre | Te ayuda a decidir |
-| ----: | :---- | :---- | :---- |
-| 1 | PI-04: ¿Qué servicios web y de correo asociados al dominio principal se observan desde Internet y en qué proveedores se alojan? | Técnica | Identificar si la infraestructura está alojada internamente o externalizada, para ajustar el perímetro de monitorización. |
-| 2 | PI-05: ¿Qué metadatos (usuarios, rutas, software) revelan los documentos públicos del dominio corporativo? | Documental | Determinar la necesidad de implementar una pasarela de sanitización de documentos antes de su publicación. |
-| 3 | PI-06: ¿Las observaciones técnicas y documentales coinciden con las medidas de seguridad y modernización esperadas de la aerolínea? | Técnica y Documental | Evaluar la higiene digital de los procesos de publicación corporativa. |
+| ---: | --- | --- | --- |
+| 1 | ¿Qué servicios web o de correo vinculados a los dominios corporativos se observan desde Internet y quién los provee? | Técnica | Evaluar la dependencia de terceros y la superficie expuesta web/correo para bastionado. |
+| 2 | ¿Qué metadatos internos (nomenclatura de usuarios, rutas, versiones de software) revelan los documentos públicos? | Documental | Implementar procesos de sanitización documental antes de la publicación web. |
+| 3 | ¿Cómo se relaciona la infraestructura técnica observada con los portales identificados en la A03? | Técnica y Relaciones | Comprender la arquitectura externa para delimitar el alcance de posibles incidentes de terceros. |
 
 ---
 
@@ -58,15 +59,21 @@
 ### 3.1 Consultas y documentos previstos
 
 | Pregunta | Herramienta | Consulta, filtro o criterio | Fuente de contraste | Qué expone y a quién | Resultado esperado |
-| :---- | :---- | :---- | :---- | :---- | :---- |
-| PI-04 | Shodan | `hostname:"aireuropa.com"` | DNS / crt.sh | La consulta a la base de datos de Shodan, sin contactar a Air Europa. | Banners web y certificados asociados al dominio. |
-| PI-04 | Shodan | `ssl.cert.subject.cn:"aireuropa.com"` | DNS / crt.sh | La consulta a Shodan. | Identificación precisa de certificados emitidos al dominio. |
-| PI-05, PI-06 | FOCA | Descarga selectiva de 15 PDFs indexados (vía Google `site:aireuropa.com filetype:pdf`). | Google / Análisis local ExifTool | Búsquedas a Google y descargas web estándar; no interacciona con infraestructura interna. | Extracción de metadatos (software, usuarios, rutas). |
-| PI-04, PI-05 | Maltego | Ampliación manual del grafo de la A03. | Resultados propios | Consulta local y a proveedores OSINT autorizados. | Mapa actualizado con infraestructura técnica y documental. |
+| --- | --- | --- | --- | --- | --- |
+| PI-01 | Shodan | `hostname:aireuropa.com` | DNS Lookup / crt.sh | El *hostname* a la API de Shodan. No toca al objetivo. | Servicios web/correo bajo el dominio. |
+| PI-01 | Shodan | `ssl.cert.subject.cn:"*.aireuropa.com"` | Censys | El CN a Shodan. No toca al objetivo. | Proveedores y certificados emitidos para la empresa. |
+| PI-02 | FOCA | `site:aireuropa.com filetype:pdf` | Búsqueda manual de Google | Envía peticiones a Google y descarga archivos públicos web. | Hasta 30 PDFs con metadatos internos expuestos. |
+| PI-03 | Maltego | Importación de dominios y resoluciones DNS básicas. | DNS manual | Envía el dominio a servidores DNS públicos. | Grafo vinculando la entidad jurídica, sus subdominios y la IP/ASN. |
 
 ### 3.2 Configuración y seguridad de la operación
 
-**Cuenta de Shodan:** Cuenta gratuita de investigación académica (sin privilegios de escaneo on-demand ni Shodan Images). Solo lectura. **Instalación de FOCA:** Proyecto configurado en entorno local aislado. Dominio principal: `aireuropa.com`. Buscador configurado: Google y Bing. Límite: 20 documentos PDF. Funciones excluidas: No se usarán `Network`, `Domains` ni ningún `Plugin` de reconocimiento de red para cumplir estrictamente las normas del sector sensible. Al terminar la obtención, el proyecto de FOCA y los PDFs descargados serán eliminados permanentemente del almacenamiento local.
+La obtención se realiza en una máquina virtual de análisis aislada. Se utiliza una cuenta gratuita de Shodan registrada con el alias de investigación (sin vinculación personal). FOCA se ejecuta sobre Windows 10 con SQL Server Express local.
+
+- **Configuración de FOCA:** Proyecto restringido al dominio `aireuropa.com`. Búsqueda web habilitada exclusivamente para extensiones `.pdf` mediante el motor de Google. Límite máximo establecido en 30 documentos. Las funciones de resolución DNS, escaneo de puertos y descubrimiento de red están *desactivadas* por normativa de la asignatura y prohibición de escaneo activo.
+
+- **Gestión post-obtención:** Al terminar, los documentos PDF descargados, el proyecto FOCA local y la base de datos SQL se eliminarán de forma segura. Nada se subirá al repositorio público.
+
+**Nota Modalidad A:** Este apartado y el anterior se completaron y consolidaron en un *commit* previo al inicio de la fase de obtención.
 
 ---
 
