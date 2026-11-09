@@ -77,7 +77,7 @@ El trabajo de recolección se detendrá inmediatamente y se consultará al profe
 * **Infraestructura activa:** Se identifica infraestructura de Comando y Control (C2) activa cuya evaluación requeriría el envío de paquetes directos desde la máquina de análisis.
 ```
 
-- **Qué hice con la respuesta:** Revise la redacción dada para entender como podia enfocar mi propia redacción sobre la Evaluación legal y el manejo de datos. Tambien revise las medidas OPSEC y condiciones de paradas que me brindó.
+- **Qué hice con la respuesta:** Revise la redacción dada para entender como podia enfocar mi propia redacción sobre la Evaluación legal y el manejo de datos. También revise las medidas OPSEC y condiciones de paradas que me brindó.
 - **Qué comprobé y con qué fuentes originales u oficiales:** Las medidas de OPSEC documentadas (aislamiento de red, entorno seguro y separación de identidades) se comprobaron y justificaron mediante el cruce de las directrices metodológicas de la asignatura con fuentes oficiales y mejores prácticas de la industria en ciberinteligencia.
 
 **Aislamiento de red (VPN sin registros):** Se verificó la necesidad de enmascarar la IP de origen para evitar el leakage de intenciones consultando las guías de recolección OSINT pasiva. El uso de conexiones no correlacionables garantiza que la investigación no alerte a los administradores de los foros o repositorios, cumpliendo con la prohibición académica de realizar escaneos activos.
