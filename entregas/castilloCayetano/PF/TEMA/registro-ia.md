@@ -4,20 +4,6 @@
 **Título del proyecto: Análisis de las vulnerabilidades PHP2Shell: ciclo de vida, evasión de parches y revisión de las evidencias sobre la implicación de la IA.**  
 **Hito y fecha: TEMA 09/11/2026**
 
-> **Registro individual de IA · proyecto final.**
-
-> **Cómo se rellena:**
->
-> 1. Por cada interacción con IA, copia el bloque «Uso 01» y rellénalo con el número siguiente. También se registran las preguntas de seguimiento y las respuestas que no se utilicen.
-> 2. Copia el prompt y la respuesta completos, sin resumirlos. No se introducirán datos personales ni material no publicable en la herramienta.
-> 3. Conserva una captura o exportación completa en `ia/`, con el número del uso: `uso-01.md`, `uso-01.txt`, `uso-01.pdf` o las capturas necesarias. La evidencia debe permitir revisar toda la interacción y coincidir con este registro.
-> 4. Explica qué se comprobó en las fuentes originales y qué se aceptó, corrigió o descartó.
-> 5. Completa la declaración, incluso si no se ha utilizado IA o no existen usos nuevos en este hito.
->
-> Solo se permite síntesis de información ya encontrada, corrección ortográfica y consulta orientativa de legislación aplicable, conforme al [enunciado](../README.md#uso-de-inteligencia-artificial). No se permite utilizar IA para investigar el caso, analizar datos ni redactar la entrega.
->
-> Borra este recuadro antes de entregar.
-
 ## Declaración
 
 - [Con uso de IA: «He utilizado inteligencia artificial únicamente para las tareas permitidas, según los usos y evidencias que se detallan a continuación».]
