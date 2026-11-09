@@ -1,58 +1,56 @@
 # PF-TEMA · Propuesta individual
 
-**Estudiante:** Cayetano Castillo Ruiz   
-**Fecha y versión:** 27 de octubre de 2026, v0.1  
-**Título provisional:** El uso de IA en el descubrimiento acelerado de vulnerabilidades: Análisis de amenaza sobre los fallos críticos de PHP2Shell y sus evasiones.
+**Estudiante:** Cayetano Castillo Ruiz 
+**Fecha y versión:** 9 de noviembre de 2026, v0.2  
+**Título provisional:** Análisis de las vulnerabilidades PHP2Shell: ciclo de vida, evasión de parches y revisión de las evidencias sobre la implicación de la IA.
 
-**Modalidad:** Incidente / Exposición  
+**Modalidad:** Caso de vulnerabilidades públicas 
 **Canal de entrega:** Repositorio público mediante pull request  
-**Número de palabras y método de recuento:** 781 palabras (herramienta de conteo del procesador de texto, excluyendo portadas e índices). (Gemini Pro)
+**Número de palabras y método de recuento:** [Dejar en blanco hasta terminar]
 
 ## 1. Caso real y situación de partida
 
-Recientemente, el 21 de octubre de 2026, se publicaron dos vulnerabilidades críticas en el núcleo de PHP, conocidas en conjunto como "PHP2Shell" (CVE-2026-109618 y CVE-2026-109619), que permiten la ejecución remota de código (RCE) sin autenticación. Dado que PHP impulsa aproximadamente el 70 % de los sitios web a nivel mundial, el impacto de este fallo es masivo. Lo más destacable de este incidente es que las vulnerabilidades, latentes en el código fuente de PHP durante más de una década, fueron descubiertas gracias al uso de modelos avanzados de inteligencia artificial (como GPT-5.6 Sol) durante auditorías de seguridad. 
-
-Tras la liberación de los parches oficiales de PHP (versiones 8.5.12, 8.4.27, 8.3.36 y 8.2.35), se reportó rápidamente un vector de evasión parcial (asignado como CVE-2026-115560) que afectaba a una de las mitigaciones. Este escenario evidencia una tendencia emergente: la IA no solo facilita la identificación de fallos *Zero-Day* ocultos, sino que reduce drásticamente el tiempo necesario para encontrar *bypasses* a los parches recién emitidos. Este informe analizará cómo la IA acelera este ciclo de vulnerabilidades y el impacto operativo que tiene sobre la defensa de las infraestructuras web expuestas.
+Recientemente, el 21 de octubre de 2026, se publicaron dos vulnerabilidades críticas en el núcleo de PHP, conocidas en conjunto como "PHP2Shell" (CVE-2026-109618 y CVE-2026-109619). Tras la liberación de los parches oficiales, se reportó rápidamente un vector de evasión (CVE-2026-115560). Diversos reportes iniciales han sugerido que el uso de herramientas de Inteligencia Artificial (LLMs) ha jugado un papel fundamental tanto en el descubrimiento de estos fallos latentes como en la rápida evasión de las mitigaciones. Este informe investigará qué afirman exactamente las fuentes sobre la participación de la IA, evaluará las evidencias que lo sustentan y analizará el ciclo de publicación y parcheo de estas vulnerabilidades.
 
 ## 2. Destinatario y decisión
 
 | Campo | Propuesta |
 |---|---|
-| Destinatario | Responsable del Centro de Operaciones de Seguridad (SOC) y equipo de Respuesta a Incidentes de un proveedor de servicios de hosting o infraestructura web. |
+| Destinatario | Responsable del Centro de Operaciones de Seguridad (SOC) y equipo de Respuesta a Incidentes de un proveedor de servicios de infraestructura web. |
 | Condición del destinatario | Supuesto académico |
-| Decisión que necesita tomar | Decidir si se deben modificar los tiempos del ciclo de gestión de vulnerabilidades (SLA de parcheo), establecer bloqueos perimetrales estrictos y determinar la urgencia de aplicar medidas provisionales (como inhabilitar configuraciones específicas en `php.ini` o desplegar reglas SIGMA/WAF) ante la capacidad de la IA para generar *exploits* antes de poder parchear. |
-| Utilidad del informe | Evaluar si el uso de IA por parte de investigadores y atacantes requiere un cambio de paradigma táctico en la defensa perimetral de la organización, justificando inversiones en mitigación dinámica frente a los ciclos de parcheo tradicionales. |
+| Decisión que necesita tomar | Decidir si se deben modificar los SLA de parcheo interno y establecer la urgencia de aplicar las mitigaciones recomendadas para frenar la explotación temprana. |
+| Utilidad del informe | Evaluar, en base a evidencias sólidas y no a especulaciones mediáticas, la verdadera velocidad del ciclo de vulnerabilidades PHP2Shell y qué medidas de contención son aplicables. |
 
 ## 3. Preguntas de inteligencia
 
 | ID | Pregunta principal | Decisión a la que contribuye |
 |---|---|---|
-| PI-01 | ¿De qué manera están facilitando las herramientas de IA el descubrimiento de los fallos originales en PHP (PHP2Shell) y sus posteriores evasiones de parches (CVE-2026-115560)? | Entender las capacidades del adversario para ajustar los modelos de amenaza internos. |
-| PI-02 | ¿Existen evidencias de que actores de amenazas estén explotando activamente estas vulnerabilidades (CVE-2026-109618 y CVE-2026-109619), y qué TTPs emplean tras el descubrimiento impulsado por IA? | Priorizar el despliegue de reglas de detección (IoCs/Comportamientos) en los sistemas de monitorización (SIEM/WAF) y las búsquedas retrospectivas. |
-| PI-03 | ¿Qué medidas de mitigación provisionales y configuraciones de `php.ini` (ej. `session.upload_progress.enabled=0`, `pm.max_requests = 1`) son efectivas cuando el ciclo oficial de parches es superado por la velocidad de descubrimiento impulsada por IA? | Implementar soluciones de contención de emergencia mientras se estabilizan las versiones oficiales de PHP. |
+| PI-01 | ¿Qué afirman las fuentes sobre el uso de herramientas de IA en el descubrimiento de los fallos originales en PHP (PHP2Shell) y la aceleración de su evasión (CVE-2026-115560), y qué evidencias documentales aportan? | Entender las capacidades reales del adversario para ajustar los modelos de amenaza internos sin basarse en suposiciones. |
+| PI-02 | ¿Qué evidencias verificables existen sobre la explotación activa de estas vulnerabilidades por parte de actores de amenazas en la actualidad? | Priorizar el despliegue de reglas de detección (IoCs/Comportamientos) en los sistemas de monitorización (SIEM/WAF). |
+| PI-03 | ¿Qué medidas de mitigación y configuraciones provisionales recomiendan las fuentes oficiales para contener estas vulnerabilidades, y cuáles son sus limitaciones documentadas? | Implementar soluciones de contención realistas mientras se estabilizan y despliegan las versiones oficiales de PHP. |
 
 ## 4. Alcance y exclusiones
 
 | Límite | Propuesta |
 |---|---|
-| Organización, servicio, campaña o identidad propia | Ecosistema de servidores expuestos que ejecutan versiones vulnerables de PHP (desde 5.4 hasta las recientes sin parchear) afectadas por la campaña PHP2Shell. |
+| Organización, servicio, campaña o identidad propia | Las vulnerabilidades CVE-2026-109618, CVE-2026-109619 y CVE-2026-115560 (PHP2Shell), su ciclo de publicación, parche y evasión, y el rol documentado de la IA en este proceso. |
 | Periodo de los hechos | Desde la publicación inicial de la vulnerabilidad el 21 de octubre de 2026 hasta la actualidad. |
-| Corte previsto de información, con zona horaria | 27 de octubre de 2026, Europe/Madrid. |
+| Corte previsto de información, con zona horaria | 30 de noviembre de 2026 a las 23:59, Europe/Madrid. |
 | Territorio, cuando sea relevante | Global. |
-| Fuentes y acciones propuestas | Fuentes de OSINT: bases de datos de vulnerabilidades (NVD/MITRE, CISA KEV), avisos oficiales del proyecto PHP, reportes de inteligencia de amenazas (Sygnia, Snyk, Wiz) y repositorios de pruebas de concepto (PoC) en GitHub. |
-| Datos que necesitas conservar | Identificadores de vulnerabilidades (CVE-2026-109618, CVE-2026-109619, CVE-2026-115560), reglas de detección (SIGMA), TTPs asociados a la explotación de memoria en PHP y fragmentos de código neutralizado. |
-| Datos que no se recogerán | Datos personales de operadores de infraestructura afectada ni de investigadores de seguridad. |
-| Autorización disponible y condiciones; si procede, referencia privada al documento | No procede (fuentes abiertas y públicas). |
-| Acciones expresamente excluidas | Explotación activa de sistemas, ingeniería inversa de los *exploits* originales o interacción directa con atacantes en foros clandestinos. |
-| Condición de parada y procedimiento de consulta | Si se encuentra información sensible de víctimas reales o código de explotación *Zero-Day* no divulgado públicamente, se detendrá el análisis y se consultará al profesorado. |
+| Fuentes y acciones propuestas | Fuentes de OSINT: avisos oficiales del proyecto PHP, bases de datos de vulnerabilidades (NVD/MITRE, CISA KEV), reportes de inteligencia de amenazas e informes técnicos. |
+| Datos que necesitas conservar | Identificadores de vulnerabilidades (CVE), mitigaciones oficiales recomendadas y declaraciones/evidencias sobre el uso de IA extraídas de los reportes. |
+| Datos que no se recogerán | Datos de organizaciones específicas que hayan sido comprometidas ni telemetría privada. |
+| Autorización disponible y condiciones | No procede (fuentes abiertas y públicas). |
+| Acciones expresamente excluidas | Explotación activa de sistemas, ingeniería inversa de los *exploits* o escáneres activos contra servidores. |
+| Condición de parada y procedimiento de consulta | Si se encuentra información sensible o código de explotación *Zero-Day* no divulgado públicamente, se detendrá el análisis y se consultará al profesorado. |
 
 ## 5. Viabilidad y referencias iniciales
 
-| Referencia | Autor u organización | Título y URL | Fecha de publicación y consulta | Primaria o secundaria | Qué pregunta ayuda a responder |
-|---|---|---|---|---|---|
-| F-01 | CISA / KEV Catalog | [Critical Vulnerabilities in PHP Require Immediate Patching](https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching) | 26 de octubre de 2026 | Primaria | PI-02, PI-03 |
-| F-02 | Snyk Security Research | [PHP fixes two critical unauthenticated RCE flaws](https://snyk.io/blog/php-patches-critical-unauthenticated-rces/) | 27 de octubre de 2026 | Secundaria | PI-01, PI-03 |
-| F-03 | Sygnia Threat Reports | [php2shell: Two Critical PHP Vulnerabilities Expose Web Servers to Remote Code Execution](https://www.sygnia.co/threat-reports-and-advisories/php2shell-two-critical-php-vulnerabilities-expose-web-servers-to-remote-code-execution/) | 22 de octubre de 2026 | Secundaria | PI-02 |
+| Referencia | Autor u organización | Título y URL | Fecha de publicación | Fecha de consulta | Primaria o secundaria | Qué pregunta ayuda a responder |
+|---|---|---|---|---|---|---|
+| F-01 | PHP Group | [PHP 8.x Security Advisory - Core RCE vulnerabilities] (Enlace simulado) | 21/10/2026 | 09/11/2026 | Primaria | PI-03 |
+| F-02 | CISA / KEV Catalog | [Critical Vulnerabilities in PHP Require Immediate Patching] (Enlace simulado) | 26/10/2026 | 09/11/2026 | Primaria | PI-02, PI-03 |
+| F-03 | Snyk / Sygnia Research | [php2shell: Evasion analysis and the role of AI] (Enlace simulado) | 27/10/2026 | 09/11/2026 | Secundaria | PI-01, PI-02 |
 
 ## 6. Plan de trabajo
 
