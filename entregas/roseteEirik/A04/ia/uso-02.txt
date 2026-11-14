@@ -1,0 +1,135 @@
+> Vale, ya hice la rama desde main y ahora tengo la rama actual. Copie a03 
+  finalizada para tenerlo aqui y poder trabajar aqui mismo sin hacer git 
+  checkout
+
+● I'll check the repo state to see where things stand.
+
+  Ran 4 shell commands (ctrl+o to expand)
+
+● Estás en A04/exposicion-tecnica-y-documental, que ahora parte de
+  main (b34b8ed), sin commits nuevos. Las carpetas A03 y A04 aparecen sin
+  seguimiento. Ojo con dos cosas:
+  - No incluyas la carpeta A03 en esta rama. Haz solo git add
+    entregas/roseteEirik/A04/README.md. Si el PR de la A04 toca A03, se devuelve
+    sin revisar.
+  - La A03 de esta carpeta es la que estoy revisando yo. Al final hay que
+    llevarla a su rama a03-roseteEirik para su propio PR. Ya lo veremos al
+    cerrar.
+
+> Subi los nuevos grafos de maltego, por favor tapa los nombres de las
+  personas para evitar que se filtren datos sensibles
+
+  Read 2 files, ran 1 shell command (ctrl+o to expand)
+
+● EV-06 y EV-07 están bien. En EV-07 tengo que tapar los nombres de personas, ya
+  que en la modalidad A los metadatos llevan seudónimo, así que me ocupo de eso
+  ahora. · summary
+
+  Read 1 file, ran 2 shell commands (ctrl+o to expand)
+
+● Los nombres quedan tapados.
+
+  Made 1 scratchpad edit +42, ran 1 shell command (ctrl+o to expand)
+
+● La A04 está terminada salvo el grafo final. Ya tiene las partes de Shodan, 
+  crt.sh y metadatos, 6 filas del atacante con el apartado «qué no cubren»,
+  las limitaciones y el índice. Ya no queda ningún bloque «Qué debe contener». 
+  Solo queda el grafo final.
+
+> explicame como hacer el ultimo grafo con sus relaciones
+
+● Usa el mismo grafo de la A03 (el de EV-14) y añádele 8 entidades, todas
+  enlazadas desde hse.ie salvo las dos últimas. Igual que antes: arrastras la
+  entidad desde la paleta, le pones el nombre con doble clic, enlazas
+  arrastrando desde el borde del origen hasta el destino y escribes la etiqueta
+  con doble clic sobre la flecha.
+
+  2. Entidades (8)
+  ┌─────┬─────────────────────────────────────────┬────────────────────────┐
+  │ N.º │ Valor                                   │ Tipo en Maltego        │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 1   │ Amazon (AWS)                            │ Organization           │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 2   │ Microsoft (Azure)                       │ Organization           │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 3   │ HSE Centralised services                │ Organization           │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 4   │ Nombres de prueba, demo y preproducción │ Phrase                 │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 5   │ healthservice.ie                        │ Domain                 │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 6   │ Documentos hse.ie (24)                  │ Document               │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 7   │ Autores USR-01 a USR-04                 │ Phrase                 │
+  ├─────┼─────────────────────────────────────────┼────────────────────────┤
+  │ 8   │ Word, InDesign y Canva                  │ Phrase                 │
+  └─────┴─────────────────────────────────────────┴────────────────────────┘
+  
+  3. Enlaces (8)
+  ┌─────────────────────────────────┬──────────────────────────┬───────────┐
+  │ Origen → Destino                │ Etiqueta                 │ Tipo      │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ hse.ie → Amazon (AWS)           │ alojamiento              │ Observada │
+  │                                 │ (OBT-01, OBT-04)         │           │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ hse.ie → Microsoft (Azure)      │ alojamiento              │ Observada │
+  │                                 │ (OBT-01, OBT-02)         │           │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ hse.ie → HSE Centralised        │ rango propio             │ Observada │
+  │ services                        │ (OBT-05)                 │           │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ hse.ie → Nombres de prueba,     │ certificados             │ Observada │
+  │ demo y preproducción            │ (OBT-03, OBT-06)         │           │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ hse.ie → healthservice.ie       │ misma IP (OBT-04)        │ Pendiente │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ hse.ie → Documentos hse.ie (24) │ documentos (OBT-07)      │ Observada │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ Documentos hse.ie → Autores     │ metadatos de autor       │ Observada │
+  │ USR-01 a USR-04                 │ (OBT-08)                 │           │
+  ├─────────────────────────────────┼──────────────────────────┼───────────┤
+  │ Documentos hse.ie → Word,       │ software (OBT-08)        │ Observada │
+  │ InDesign y Canva                │                          │           │
+  └─────────────────────────────────┴──────────────────────────┴───────────┘
+
+  Para los autores escribe literalmente "USR-01 a USR-04", nunca los nombres
+  reales. Luego pulsa View > Zoom to Fit y exporta como imagen.
+
+  Haz el grafo, expórtalo a originales-a04/EV-08.png y avísame. Tapo lo que haga
+  falta.
+
+> Ya está
+  Read 1 file, ran 1 shell command (ctrl+o to expand)
+
+● Se ve bien y no tiene datos que tapar. Los bordes quedan algo cortados, pero
+  no hay tiempo para repetirla. Son las 23:49 y quedan 10 minutos, así que hay
+  que subir ya. Lo más rápido  es que me digas "hazlo" y lo ejecuto yo. Si 
+  prefieres hacerlo tú, estos son los pasos exactos, en orden:
+
+  A04 (en tu rama actual)
+  git add entregas/roseteEirik/A04
+  git commit -m "A04: obtención, análisis y cierre"
+  git push -u origin HEAD:a04-roseteEirik
+  La subo con otro nombre porque la rama remota
+  A04/exposicion-tecnica-y-documental tiene otro historial y el push normal
+  sería rechazado. No añadas .gitignore.
+
+  PR: abre https://github.com/eirik-rosete/26-27-CIBINT/pull/new/a04-roseteEirik
+  y .../pull/new/a03-roseteEirik. Pon como base hector-ae21/26-27-CIBINT y la
+  rama main, y los títulos [A04] Rosete Eirik y [A03] Rosete Eirik.
+
+> La repeti para que se viera toda
+
+● Bash(date +%H:%M; cd
+      "c:/Users/hecto/Documents/Eirik/Personal/universidad/cibint" && ls -la
+      --time-style=+%H:%M originales-a04/EV-08.png && cp
+      originales-a04/EV-08.p…)
+  ⎿  1 file changed (binary, mode only or too large to show)
+
+● La nueva EV-08 (la de las 23:49) se encuentra en la carpeta de evidencias de
+  la A04. No he podido mirarla, así que no sé si ahora se ve entera; ábrela tú 
+  un segundo antes de subirla. El README no cambia.
+
+  Son las 23:49: sube ya. O haces tú los comandos del mensaje anterior, o me
+  escribes "hazlo" y hago yo los commits, los push de las dos ramas y te paso
+  los enlaces de los PR.
