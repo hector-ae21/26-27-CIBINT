@@ -70,12 +70,4 @@ He leído las condiciones del proyecto. Esta propuesta no me autoriza a acceder 
 
 ## 8. Resolución de la propuesta
 
-**Fecha:** 4 de noviembre de 2026  
-**Resolución:** Aprobada con condiciones  
-**Versión del alcance aprobada:** 27 de octubre de 2026
-
-**Condiciones:**
-
-1. Añade al menos una fuente primaria de Air Europa (comunicado o correo a clientes reproducido en una fuente verificable) para no depender solo de INCIBE y de la prensa.
-2. Los riesgos de fraude secundario (PI-03) se describen como posibilidades justificadas por las fuentes, sin atribuir a esta brecha fraudes posteriores concretos.
-3. El análisis técnico del Tema 4 se limita a la información que se conoce sobre el incidente: no se consulta la infraestructura actual de Air Europa si no es estrictamente necesario.
+[Pendiente de revisión y resolución por parte del docente.]
