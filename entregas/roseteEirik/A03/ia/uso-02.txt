@@ -1,0 +1,246 @@
+
+> <ide_opened_file>The user opened the file c:\Users\hecto\Documents\Eirik\Pers
+  onal\universidad\cibint\fork-entregas\entregas\roseteEirik\A03\README.md in
+  the IDE. This may or may not be related to the current
+  task.</ide_opened_file>
+
+> Ayúdame a realizar en grafo de maltego de la actividad 03 en
+  @C:\Users\hecto\Documents\Eirik\Personal\universidad\cibint\fork-entregas\ent
+  regas\roseteEirik\A03\README.md
+  ⎿  Read fork-entregas\entregas\roseteEirik\A03\README.md (299 lines)
+
+  Searched for 2 patterns, ran 1 shell command (ctrl+o to expand)
+
+● Te dejo el grafo preparado para montarlo a mano en Maltego. Sale directamente
+  de tu tabla 5.3, y he añadido un enlace al segundo ministro (OBT-11) y otro
+  del logotipo a www2.hse.ie para que la cadena de OBT-09 se vea en el grafo. En
+  total son 29 entidades y 29 enlaces. Antes de empezar, dos avisos:
+
+  - Tu registro de IA es de nivel C y esta consulta cuenta como un uso. Apúntala
+    en registro-ia.md. Tu profesor puede considerar que pasar la tabla 5.3 a un
+    grafo es analizar resultados, así que revisa tú cada fila.
+  - No uses ninguna transformación. El menú del botón derecho las ofrece, pero
+    no las ejecutes. Así no incumples tus exclusiones (3.1 y 2.2).
+
+  1. Montaje en Maltego
+
+  1. Abre un grafo nuevo con New Graph (Ctrl+T).
+  2. Arrastra cada tipo desde el Entity Palette, a la izquierda, hasta el
+     lienzo. Haz doble clic en la etiqueta para escribir el valor.
+  3. Para crear un enlace, arrastra desde la entidad de origen hasta la de
+     destino.
+  4. Selecciona cada enlace y, en Property View, rellena:
+     - Label: la relación y su OBT, por ejemplo "lo crea (OBT-12)"
+     - Show label: activado
+     - Estilo y color: declarada en verde con línea continua, observada en azul
+       con línea continua, pendiente en naranja con línea discontinua
+  5. Ordena el grafo desde la pestaña Layout con Hierarchical u Organic,
+     poniendo el HSE en el centro.
+  6. Exporta con Export Graph as Image en PNG y guárdalo como
+     evidencias/EV-14.png. La imagen no lleva tu usuario de Maltego. No subas el
+     archivo .mtgz al repositorio: la actividad lo prohíbe.
+
+  2. Entidades (29)
+
+  ┌───────┬───────────────────────────────────────────────┬─────────────────┐
+  │  N.º  │                     Valor                     │ Tipo de entidad │
+  │       │                                               │    en Maltego   │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 1     │ Health Service Executive (HSE)                │ Organization    │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 2     │ Feidhmeannacht na Seirbhíse Sláinte           │ Alias           │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 3     │ Health Act 2004 (Number 42 of 2004)           │ Document        │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 4     │ HSE Board                                     │ Organization    │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 5     │ Minister for Health                           │ Organization    │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 6     │ Minister for Children, Equality, Disability,  │ Organization    │
+  │       │ Integration and Youth                         │                 │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 7     │ gov.ie                                        │ Domain          │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 8     │ data.gov.ie                                   │ Domain          │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 9     │ hse.ie                                        │ Domain          │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │       │ about.hse.ie, careerhub.hse.ie,               │                 │
+  │ 10–16 │ healthservice.hse.ie,                         │ DNS Name        │
+  │       │ www2.healthservice.hse.ie, hepctest.hse.ie,   │                 │
+  │       │ service-manual.hse.ie, www2.hse.ie            │                 │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 17    │ National Screening Service                    │ Organization    │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 18    │ @NSShse                                       │ Twitter         │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 19    │ @HSELive                                      │ Twitter         │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 20    │ Página de empresa HSE                         │ Linkedin        │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 21    │ HSE en Facebook                               │ Facebook        │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │       │ HSE en Instagram, HSE en TikTok, HSE en       │ Affiliation     │
+  │ 22–24 │ YouTube                                       │ (rellena        │
+  │       │                                               │ Network)        │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 25    │ HSE Live 1800 700 700                         │ Phone Number    │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 26    │ Logotipo HSE (imagen de perfil de @HSELive)   │ Image           │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 27    │ alamy.com                                     │ Domain          │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 28    │ Proveedor sin nombre (careerhub)              │ Organization    │
+  ├───────┼───────────────────────────────────────────────┼─────────────────┤
+  │ 29    │ Proveedor sin nombre (hepctest)               │ Organization    │
+  └───────┴───────────────────────────────────────────────┴─────────────────┘
+
+  3. Enlaces (29)
+
+  ┌──────────────────────────────────────┬──────────────────────┬───────────┐
+  │           Origen → Destino           │       Etiqueta       │   Tipo    │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ Health Act 2004 → HSE                │ lo crea (OBT-12)     │ Observada │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → Feidhmeannacht…                │ nombre en irlandés   │ Observada │
+  │                                      │ (OBT-12)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → HSE Board                      │ órgano de gobierno   │ Declarada │
+  │                                      │ (OBT-11)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE Board → Minister for Health      │ reporta a (OBT-11)   │ Declarada │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE Board → Minister for Children…   │ reporta a (OBT-11)   │ Declarada │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ gov.ie → HSE                         │ ficha del organismo  │ Observada │
+  │                                      │ (OBT-13)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ data.gov.ie → HSE                    │ publicador de datos  │ Observada │
+  │                                      │ (OBT-13)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → hse.ie                         │ dominio oficial      │ Declarada │
+  │                                      │ (OBT-06)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ hse.ie → about, careerhub,           │ subdominio (OBT-01,  │           │
+  │ healthservice, www2.healthservice (4 │ OBT-02)              │ Observada │
+  │  enlaces)                            │                      │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ hse.ie → hepctest, service-manual (2 │ subdominio (OBT-14)  │ Observada │
+  │  enlaces)                            │                      │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ hse.ie → www2.hse.ie                 │ subdominio (OBT-09)  │ Observada │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → National Screening Service     │ servicio con marca   │ Declarada │
+  │                                      │ propia (OBT-05)      │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ National Screening Service → @NSShse │ cuenta en X (OBT-05) │ Declarada │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → LinkedIn                       │ perfil (OBT-03,      │ Declarada │
+  │                                      │ OBT-06)              │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → Facebook, Instagram, TikTok,   │ perfil en el pie     │ Declarada │
+  │ YouTube (4 enlaces)                  │ (OBT-06)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → HSE Live                       │ línea de atención    │ Declarada │
+  │                                      │ (OBT-06)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ HSE → @HSELive                       │ enlazada en 2024, ya │ Pendiente │
+  │                                      │  no (OBT-07, OBT-08) │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ @HSELive → Logotipo                  │ imagen de perfil     │ Observada │
+  │                                      │ (OBT-09)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ Logotipo → www2.hse.ie               │ mismo logotipo       │ Observada │
+  │                                      │ (OBT-09)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ Logotipo → alamy.com                 │ copia en banco de    │ Observada │
+  │                                      │ imágenes (OBT-09)    │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ careerhub.hse.ie → Proveedor         │ trata datos por      │           │
+  │ (careerhub)                          │ cuenta del HSE       │ Pendiente │
+  │                                      │ (OBT-14)             │           │
+  ├──────────────────────────────────────┼──────────────────────┼───────────┤
+  │ hepctest.hse.ie → Proveedor          │ trata datos por      │           │
+  │ (hepctest)                           │ cuenta del HSE       │ Pendiente │
+  │                                      │ (OBT-14)             │           │
+  └──────────────────────────────────────┴──────────────────────┴───────────┘
+
+  4. Cambios en el README cuando termines
+
+  - En OBT-15 y en el apartado 4.2 de Maltego, cambia los [PENDIENTE] por la
+    fecha y hora reales y por "29 entidades y 29 enlaces", si al final cuadra.
+  - En la tabla 5.3, añade la fila "HSE Board → Minister for Children, Equality,
+    Disability, Integration and Youth | Declarada | OBT-11". Separa también
+    "@HSELive → logotipo" y "Logotipo → www2.hse.ie".
+  - En la leyenda de 5.3, añade los colores: verde continua para declarada, azul
+    continua para observada y naranja discontinua para pendiente.
+  - En EV-14, apartado 8, pon "Nada: sin sesión iniciada ni datos personales
+    visibles".
+
+  Cuando hayas exportado la imagen, puedo hacer estos cambios en el README.
+
+> <ide_opened_file>The user opened the file c:\Users\hecto\Documents\Eirik\Pers
+  onal\universidad\cibint\retroalimentacion\ejemplos-a04\PENDIENTES-EIRIK.md in
+  the IDE. This may or may not be related to the current
+  task.</ide_opened_file>
+
+> Los proveedores careerhub y hepctest y alamy son necesarios?
+
+● Ninguno es obligatorio. Los proveedores sí te recomiendo dejarlos; alamy.com
+  puedes quitarlo.
+
+  Proveedores de careerhub y hepctest: déjalos.
+  - Fuera de las redes sociales, son los únicos terceros que has encontrado. Sin
+    ellos, el grafo apenas dice nada de P3.
+  - En el apartado 4.2 escribiste que el grafo muestra lo que es declarado y lo
+    que queda pendiente. Si los quitas, en pendiente solo queda @HSELive.
+  - Si quieres simplificar, júntalos en una sola entidad, "Proveedores sin
+    nombre". careerhub.hse.ie y hepctest.hse.ie enlazarían los dos a ella. Así
+    no das a entender que son dos empresas distintas, algo que no sabes.
+
+  alamy.com: puedes quitarlo.
+  - No responde a ninguna pregunta. Es un banco de imágenes y, como dices en
+    5.2, no indica mala fe.
+  - La fila del logotipo en el apartado 6 se apoya en las 59 copias de OBT-09,
+    no en alamy en concreto, así que se sostiene sin esa entidad.
+  - Si lo quitas, borra también la fila "Logotipo → alamy.com" de la tabla 5.3
+    para que el grafo y la tabla coincidan.
+
+  Recuento final
+  - Si quitas alamy y juntas los proveedores, quedan 27 entidades y 28 enlaces.
+  - Si solo quitas alamy, quedan 28 entidades y 28 enlaces.
+
+> <ide_opened_file>The user opened the file c:\Users\hecto\Documents\Eirik\Pers
+  onal\universidad\cibint\retroalimentacion\ejemplos-a04\PENDIENTES-EIRIK.md in
+  the IDE. This may or may not be related to the current
+  task.</ide_opened_file>
+
+> Los proovedores que relacion mantienen con la entidad hse
+
+● Según OBT-14, son encargados del tratamiento. Las políticas de privacidad de
+  careerhub.hse.ie y hepctest.hse.ie dicen que hay proveedores externos que
+  tratan datos por cuenta del HSE. En términos del RGPD, el HSE es el
+  responsable del tratamiento: decide para qué se usan los datos. Los
+  proveedores tratan esos datos siguiendo sus instrucciones, sin decir quiénes
+  son ni qué servicio dan.
+
+  Eso afecta a cómo etiquetas el enlace en el grafo:
+
+  - Que la relación existe está declarado. Lo dice el propio HSE en sus
+    políticas. Además, en 5.2 (De relaciones) ya escribes "Las relaciones son
+    declaradas".
+  - Lo pendiente es quiénes son. No hay nombres, y además solo viste el
+    fragmento de Google, no abriste los avisos.
+
+  Ahora mismo la tabla 5.3 los marca como "Pendiente", lo que choca con lo que
+  dices en 5.2. Te propongo esto:
+
+  - Origen: HSE. La relación es con el organismo, no con el subdominio.
+  - Destino: "Proveedores sin identificar".
+  - Etiqueta: "encargado del tratamiento en careerhub y hepctest (OBT-14)".
+  - Tipo: Declarada.
+
+  Así el grafo muestra que el HSE reconoce tener estos terceros. El nombre de la
+  entidad deja claro que su identidad no se conoce. Si cambias el tipo, cambia
+  también la fila de 5.3 y la frase de 4.2 que dice que el grafo los deja como
+  pendientes.

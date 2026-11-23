@@ -1,0 +1,288 @@
+
+> <ide_opened_file>The user opened the file
+  c:\Users\hecto\Documents\Eirik\Personal\universidad\cibint\fork-entregas\acti
+  vidades\A03-huella-publica\README.md in the IDE. This may or may not be
+  related to the current task.</ide_opened_file>
+
+> Necesito que me ayudes a realizar la actividad A03 en mi directorio, dame la
+  estructura de archivos que debe llevar la actividad. El objetivo es el mismo
+  que el de mi investigación del proyecto final: HSE y el hackeo de ransomware
+  Conti en 2021.
+
+  Sigue las reglas marcadas en el README con las políticas de inteligencia
+  artifical, siempre sigue las reglas.
+
+  Igualmente lo que te pediré es que me ayudes con la documentación que tienes
+  en @documentation\contenidos\03-osint-personas-y-organizaciones
+
+  Más que nada para saber el uso de herramientas y yo redactar el trabajo.
+  ⎿  Listed directory
+     documentation\contenidos\03-osint-personas-y-organizaciones\
+
+● Voy a leer primero el README de la actividad (con sus políticas de IA) y la
+  documentación del tema 03.
+
+  Read 1 file, ran 6 shell commands (ctrl+o to expand)
+
+● Ya tengo el enunciado, la plantilla y el catálogo del Tema 3. Compruebo que
+  HSE no sea el caso de la A01/A02 (está excluido) y creo la estructura de
+  carpetas.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● HSE no aparece en la A01 ni en la A02, así que no está excluido. Creo la
+  carpeta copiando las plantillas sin cambiar nada (el paso 2 del enunciado lo
+  pide así).
+
+● Bash(cd 'C:\Users\hecto\Documents\Eirik\Personal\universidad\cibint\fork-entre
+      gas'; D=entregas/roseteEirik/A03; ls -A $D; cp
+      actividades/A03-huella-publica/plantilla…)
+  ⎿  entregas/roseteEirik/A03
+     entregas/roseteEirik/A03/evidencias
+     entregas/roseteEirik/A03/ia
+     … +2 lines (ctrl+o to expand)
+  ⎿  Created fork-entregas\entregas\roseteEirik\A03\README.md (+187 -0)
+        1 +# A03 · Huella pública                                        
+        2 +                                                              
+        3 +> **Cómo usas esta plantilla**                                
+        4 +>                                                             
+        5 +> Cópiala como `README.md` en tu carpeta `A03`: en la modalida
+          +d A, `entregas/apellidoNombre/A03/`; en la modalidad B, una ca
+          +rpeta `A03` en tu equipo, fuera del repositorio del curso, que
+          + entregarás comprimida en el Campus Virtual. Trabaja **sobre e
+          +sa copia**. No edites este archivo ni la carpeta de nadie más.
+        6 +>                                                             
+        7 +> Rellena los apartados sin cambiar su orden ni su numeración.
+          + Sustituye cada bloque «Qué debe contener» por tu respuesta. S
+          +i algo no te aplica, explica por qué en lugar de borrarlo. Bor
+          +ra estas instrucciones antes de entregar.                     
+        8 +>                                                             
+        9 +> Completa los apartados 2 y 3 **antes** de la primera consult
+          +a: en la modalidad A, haz un *commit*; en la modalidad B, anot
+          +a al final del apartado 3 la fecha y hora de cierre del plan. 
+          +Cada afirmación se acompaña de la fila del registro de la que 
+          +sale: `(OBT-04)`, `(OBT-07, OBT-08)`.                         
+       10 +>                                                             
+       11 +> Enunciado completo: [A03 · Huella pública](https://github.co
+          +m/hector-ae21/26-27-CIBINT/blob/main/actividades/A03-huella-pu
+          +blica/README.md)                                              
+       12 +                                                              
+       13 +## Estudiante                                                 
+       14 +                                                              
+       15 +- Nombre:                                                     
+       16 +- Carpeta personal:                                           
+       17 +- Modalidad:                                                  
+       18 +- Objetivo:                                                   
+       19 +- ¿Es el objetivo de tu proyecto final?:                      
+       20 +- Punto de partida (dominio principal o identificadores propio
+          +s):                                                           
+       21 +- Periodo de obtención, con zona horaria:                     
+       22 +                                                              
+       23 +---                                                           
+       24 +                                                              
+       25 +## 1. Resumen ejecutivo                                       
+       26 +                                                              
+       27 +> **Qué debe contener.** Se escribe al final. Como máximo 250 
+          +palabras. Un párrafo que el destinatario pueda leer sin el res
+          +to del informe y una tabla que responda cada pregunta del apar
+          +tado 2.3 con su nivel de confianza y sus referencias.         
+       28 +                                                              
+       29 +| Pregunta | Respuesta breve | Confianza | Referencias |      
+       30 +|---|---|---|---|                                             
+       31 +| | | | |                                                     
+       32 +                                                              
+       33 +---                                                           
+       34 +                                                              
+       35 +## 2. Encargo                                                 
+       36 +                                                              
+       37 +### 2.1 Objetivo elegido                                      
+       38 +                                                              
+       39 +> **Qué debe contener.** La modalidad, por qué has elegido el 
+          +objetivo, si coincide con el de tu proyecto final y cómo has c
+          +omprobado que hay material suficiente para la A03 y la A04: co
+          +nsulta, fecha y resultado. Comprueba uno por uno los requisito
+          +s de tu modalidad en el apartado 3 del enunciado.             
+       40 +                                                              
+     … 147 more lines (ctrl+o to expand)
+  ⎿  Created fork-entregas\entregas\roseteEirik\A03\registro-ia.md (+27 -0)
+       1 +# Registro de uso de inteligencia artificial · A03             
+       2 +                                                               
+       3 +> **Cómo se rellena**                                          
+       4 +>                                                              
+       5 +> Copia este archivo a tu carpeta `A03`, junto al informe, y tr
+         +abaja sobre la copia.                                          
+       6 +>                                                              
+       7 +> 1. Cada vez que uses IA, copia el bloque «Uso 1» y rellénalo 
+         +con el número siguiente.                                       
+       8 +> 2. Como evidencia, guarda una captura o exportación en la car
+         +peta `ia/` con el número del uso (`uso-01.png`, `uso-02.pdf`…),
+         + o pega el enlace para compartir la conversación.              
+       9 +> 3. Si no has usado IA, borra el bloque y escribe: «No he util
+         +izado inteligencia artificial».                                
+      10 +>                                                              
+      11 +> Nivel C: la IA puede usarse para aclarar conceptos, entender 
+         +sintaxis o el funcionamiento de una herramienta, buscar ideas q
+         +ue después decides tú o revisar la ortografía. No puede redacta
+         +r el informe, hacer búsquedas en tu nombre, analizar tus result
+         +ados ni tomar decisiones. **No se introducen en la IA** tus dat
+         +os personales ni los resultados de la obtención: nombres, cuent
+         +as, correos, capturas ni documentos.                           
+      12 +>                                                              
+      13 +> Borra este recuadro antes de entregar.                       
+      14 +                                                               
+      15 +## Uso 1                                                       
+      16 +                                                               
+      17 +- **Herramienta y modelo:**                                    
+      18 +- **Para qué:**                                                
+      19 +- **Apartado del informe:**                                    
+      20 +- **Prompt, copiado tal cual:**                                
+      21 +                                                               
+      22 +  ```text                                                      
+      23 +                                                               
+      24 +  ```                                                          
+      25 +                                                               
+      26 +- **Qué hice con la respuesta:**                               
+      27 +- **Evidencia:** `ia/uso-01.png` o enlace a la conversación    
+  ⎿  (files that changed while this command ran, by the command or by
+     another process; a convenience view, not a review or audit of the
+     command)
+
+● Te he creado la estructura de la A03 en tu carpeta, con las dos plantillas
+  copiadas sin cambios. Abajo tienes cómo se usa cada herramienta aplicada a
+  HSE. No he redactado ningún apartado ni he hecho búsquedas: lo que consultas y
+  lo que concluyes lo decides tú, como exige el nivel C.
+
+  1. Estructura (modalidad A, porque HSE es una organización)
+
+  entregas/roseteEirik/A03/
+  ├── README.md          ← copia de plantilla-respuesta.md (sin editar todavía)
+  ├── registro-ia.md     ← copia de registro-ia.md
+  ├── ia/                ← uso-01.md o .png de esta conversación
+  └── evidencias/        ← EV-01.png, EV-02.png…
+
+  Ahora mismo estás en la rama PF/tema y los archivos están sin seguimiento en
+  git. Antes de escribir nada:
+
+  1. Sincroniza tu fork en GitHub ("Sync fork"), luego git switch main y git
+     pull.
+  2. Crea la rama con git switch -c a03-roseteEirik. Los archivos sin
+     seguimiento pasan a la nueva rama.
+  3. Haz un commit solo con los apartados 2 y 3 antes de la primera consulta. Si
+     falta ese commit pierdes 1 punto.
+
+  Git no guarda carpetas vacías: ia/ y evidencias/ se subirán cuando tengan
+  archivos dentro.
+
+  La entrega es hoy, 30/10, antes de las 23:59. Lo que hagas después de esa hora
+  en la rama no cuenta.
+
+  2. HSE como objetivo: qué tienes que comprobar tú
+
+  ┌─────────────────────────┬───────────────────────────────────────────────┐
+  │        Requisito        │                   Situación                   │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ Actividad pública en    │ Irlanda cumple                                │
+  │ Europa                  │                                               │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ Dominio propio con PDF  │ Compruébalo con site:hse.ie filetype:pdf y    │
+  │                         │ anota la fecha en el 2.1                      │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ Información             │ El BORME es solo para España, así que no      │
+  │ institucional oficial   │ sirve. Ver OpenCorporates más abajo           │
+  ├─────────────────────────┼───────────────────────────────────────────────┤
+  │ No ser caso de la A01 o │ He comprobado que HSE no aparece en ninguna   │
+  │  la A02                 │ de las dos                                    │
+  └─────────────────────────┴───────────────────────────────────────────────┘
+
+  Por ser sector sanitario con incidente, se aplican las reglas reforzadas del
+  apartado 3.1:
+  - Nada de datos de pacientes ni de empleados. Si una pregunta necesita un
+    cargo, usa el cargo y no el nombre.
+  - No buscas, abres ni descargas nada de la filtración de Conti, y no visitas
+    foros donde se ofrezca.
+  - No relacionas un hallazgo tuyo con el ataque si ninguna fuente lo hace. Esto
+    es fácil de saltarse sin querer al hablar de phishing.
+
+  3. Las herramientas aplicadas a HSE
+
+  Google con operadores (obligatoria)
+  - Los operadores van sin espacio (site:hse.ie, no site: hse.ie), OR en
+    mayúsculas y el - pegado al término.
+  - Combinaciones útiles: site:hse.ie filetype:pdf, site:hse.ie intitle:...,
+    "Health Service Executive" -site:hse.ie (menciones fuera del dominio
+    oficial), y after:/before: para acotar fechas.
+  - Añade los filtros de uno en uno y registra cada variante en su propia fila
+    OBT. Así se ve qué filtro cambió el resultado.
+  - Límites que conviene escribir: site: no da un inventario completo, la fecha
+    de Google no es la del documento y que algo no aparezca no prueba que no
+    exista.
+
+  Wayback Machine (obligatoria)
+  - Escoge una página que importe para tus preguntas: contacto, canales
+    oficiales o avisos de seguridad o estafas. Compara dos capturas.
+  - Registra la URL archivada completa (web.archive.org/web/AAAAMMDDhhmmss/...),
+    que ya lleva la fecha dentro. Esa fecha es la de la captura, no la de
+    publicación.
+  - Puedes comparar una versión anterior y otra posterior a mayo de 2021,
+    siempre sobre canales públicos de HSE. Si atribuyes un cambio al ataque,
+    necesitas una fuente que lo diga.
+  - La captura de pantalla tiene que mostrar las dos versiones con su fecha.
+
+  OpenCorporates (obligatoria, porque el BORME no aplica)
+  - Busca la denominación y filtra por jurisdicción Irlanda. Abre las fichas que
+    salgan y compara número de registro, estado y fuente de origen.
+  - Aviso: por lo que yo sé, HSE es un organismo público creado por ley y no una
+    sociedad mercantil. Puede que no aparezca, o que salgan entidades con
+    nombres parecidos. Esto no lo puedes citar, porque la IA no es una fuente.
+    Compruébalo tú en una fuente oficial irlandesa.
+  - Una consulta vacía o con candidatos que descartas también es un resultado.
+    Regístrala como tal y explica qué significa.
+  - Justifica en el 3.2 que el BORME queda fuera por jurisdicción.
+
+  Maltego (obligatoria)
+  - Con la edición gratuita (Community) puedes construir el grafo a mano con los
+    datos que ya has obtenido. No necesitas ejecutar transformaciones.
+  - Elige el tipo de entidad correcto: Organization para HSE, Domain para cada
+    dominio y la entidad de perfil social para cada cuenta.
+  - Etiqueta cada enlace como observado (la web enlaza al perfil), declarado (el
+    perfil dice ser de HSE) o pendiente, y añade el OBT y la fecha en notas o
+    propiedades. Esto separa un 8 de un 10.
+  - No unas dos piezas solo porque coincide el nombre. Si ejecutas alguna
+    transformación, lee antes qué fuente consulta y qué envía, y regístralo.
+  - Para la evidencia, exporta el grafo como imagen. No entregues el archivo del
+    proyecto.
+
+  Opcional (al menos una)
+  - Google Lens o TinEye: encajan bien con el atacante del apartado 6. Por
+    ejemplo, puedes comprobar si el logo o una imagen oficial de HSE se
+    reutiliza en otros sitios.
+  - Hunchly: sirve para conservar el recorrido. Es de pago y, que yo sepa, tiene
+    una prueba gratuita.
+  - Intelligence X y Serus sobre hse.ie: no te los recomiendo con este objetivo.
+    Lo más probable es que salgan referencias a la filtración de Conti, y eso
+    choca con las reglas del incidente. Si aun así los usas, registra solo la
+    categoría y no abras nada.
+
+  OpenSanctions y Babel Street: lo normal es descartarlas en el 3.2 con su
+  motivo. Ninguna pregunta de huella pública las necesita, y Babel Street
+  requiere licencia.
+
+  4. Capturas
+
+  Recórtalas. Tapa tu usuario, tu correo y cualquier dato de tu sesión con un
+  bloque opaco, no con desenfoque. Que no se vea ningún nombre de empleado ni de
+  otra persona.
+
+  5. Declarar esta conversación
+
+  Esta conversación es el Uso 1 de tu registro-ia.md:
+  - Herramienta y modelo: Claude Code, Claude Opus 5.5 (claude-opus-5-5).
+  - Para qué: entender cómo funcionan las herramientas y crear la estructura de
+    carpetas.
+  - Prompt: tu mensaje copiado tal cual.
+  - Evidencia: exporta la conversación con /export a ia/uso-01.md.
+
+  De aquí en adelante, no me pases resultados de tu obtención, capturas ni datos
+  que encuentres. Eso está prohibido en el nivel C y cuesta −1 punto. Sí puedo
+  resolverte dudas de sintaxis o de cómo funciona una herramienta, y revisar la
+  ortografía de un texto que ya hayas escrito tú.

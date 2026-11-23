@@ -1,0 +1,260 @@
+
+> Necesito que me ayudes a realizar la actividad A04 en mi directorio, dame la
+  estructura de archivos que debe llevar la actividad. El objetivo es el mismo
+  que el de mi investigación del proyecto final: HSE y el hackeo de ransomware
+  Conti en 2021. Dicho avance está en @cibint/entregas/roseteEirik/PF
+
+  Sigue las reglas marcadas en el README con las políticas de inteligencia
+  artifical, siempre sigue las reglas.
+
+  Igualmente lo que te pediré es que me ayudes con la documentación de todos
+  los temas en @documentation/contenidos y la documentacion especifica del tema
+  que tienes en
+  @documentation/contenidos/04-osint-tecnico-infraestructura-y-exposicion
+
+  Más que nada para saber el uso de herramientas y yo redactar el trabajo.
+  ⎿  Listed directory cibint\entregas\roseteEirik\PF\
+  ⎿  Listed directory documentation\contenidos\
+  ⎿  Listed directory
+     documentation\contenidos\04-osint-tecnico-infraestructura-y-exposicion\
+
+● Voy a revisar primero el README con las políticas de IA, la definición de la
+  actividad A04 y tu avance del PF.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+● La definición de A04 está en fork-entregas. Leo el README del curso, la
+  política de IA, la actividad A04 y tu PF.
+
+  Read 1 file, ran 4 shell commands (ctrl+o to expand)
+
+● Ahora tu A03 (la A04 es su continuación, mismo objetivo y modalidad) y la
+  documentación del Tema 4.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+● Dato clave: el HSE es una entidad sanitaria y sufrió un incidente, así que
+  aplican las reglas reforzadas. Leo el catálogo de herramientas del Tema 4 y
+  las reglas reforzadas de la A03.
+
+  Read 1 file, ran 2 shell commands (ctrl+o to expand)
+
+● Ahora las definiciones del Tema 4, el ejercicio de obtención de Delta y un
+  vistazo al resto de temas para ver qué conceptos usa la A04 (valoración de
+  fuentes, OPSEC, Maltego).
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+● Reviso por encima los otros temas, sobre todo lo que la A04 pide aplicar:
+  valoración de fuentes (fiabilidad/credibilidad), OPSEC, Maltego manual y
+  niveles de confianza.
+
+  Ran 4 shell commands (ctrl+o to expand)
+
+● Tengo el contexto. Compruebo el estado de git del fork y si hay
+  retroalimentación de la A03 que afecte a la A04.
+
+  Ran 1 shell command, recalled 1 memory (ctrl+o to expand)
+
+● Hay dos cosas en tu repo que afectan a la A04. Las explico al final. Primero
+  creo la carpeta con las copias de las plantillas, sin tocar su contenido.
+
+● Bash(cd 'C:\Users\hecto\Documents\Eirik\Personal\universidad\cibint\fork-entre
+      gas'; mkdir -p entregas/roseteEirik/A04/evidencias
+      entregas/roseteEirik/A04/ia && cp ac…)
+  ⎿  entregas/roseteEirik/A04
+     entregas/roseteEirik/A04/evidencias
+     entregas/roseteEirik/A04/ia
+     … +5 lines (ctrl+o to expand)
+  ⎿  Created fork-entregas\entregas\roseteEirik\A04\README.md (+205 -0)
+        1 +# A04 · Exposición técnica y documental                       
+        2 +                                                              
+        3 +> **Cómo usas esta plantilla**                                
+        4 +>                                                             
+        5 +> Cópiala como `README.md` en tu carpeta `A04`: en la modalida
+          +d A, `entregas/apellidoNombre/A04/`; en la modalidad B, una ca
+          +rpeta `A04` en tu equipo, fuera del repositorio del curso, que
+          + entregarás comprimida en el Campus Virtual. Trabaja **sobre e
+          +sa copia**. No edites este archivo, tu carpeta de la A03 ni la
+          + carpeta de nadie más.                                        
+        6 +>                                                             
+        7 +> Rellena los apartados sin cambiar su orden ni su numeración.
+          + Sustituye cada bloque «Qué debe contener» por tu respuesta. S
+          +i algo no te aplica, explica por qué en lugar de borrarlo. Bor
+          +ra estas instrucciones antes de entregar.                     
+        8 +>                                                             
+        9 +> Completa los apartados 2 y 3 **antes** de la primera consult
+          +a: en la modalidad A, haz un *commit*; en la modalidad B, anot
+          +a al final del apartado 3 la fecha y hora de cierre del plan. 
+          +Cada afirmación se acompaña de la fila del registro de la que 
+          +sale: `(OBT-04)`. Para citar la A03, usa `(A03 OBT-05)`.      
+       10 +>                                                             
+       11 +> Enunciado completo: [A04 · Exposición técnica y documental](
+          +https://github.com/hector-ae21/26-27-CIBINT/blob/main/activida
+          +des/A04-exposicion-tecnica-y-documental/README.md)            
+       12 +                                                              
+       13 +## Estudiante                                                 
+       14 +                                                              
+       15 +- Nombre:                                                     
+       16 +- Carpeta personal:                                           
+       17 +- Modalidad:                                                  
+       18 +- Objetivo:                                                   
+       19 +- Entrega de la A03 (enlace al *pull request* o «entregada en 
+          +el Campus Virtual»):                                          
+       20 +- Periodo de obtención, con zona horaria:                     
+       21 +                                                              
+       22 +---                                                           
+       23 +                                                              
+       24 +## 1. Resumen ejecutivo                                       
+       25 +                                                              
+       26 +> **Qué debe contener.** Se escribe al final. Como máximo 300 
+          +palabras. Un párrafo que el destinatario pueda leer sin el res
+          +to del informe, con las conclusiones de la A03 que cambian, y 
+          +una tabla que responda cada pregunta del apartado 2.3 con su n
+          +ivel de confianza y sus referencias.                          
+       27 +                                                              
+       28 +| Pregunta | Respuesta breve | Confianza | Referencias |      
+       29 +|---|---|---|---|                                             
+       30 +| | | | |                                                     
+       31 +                                                              
+       32 +---                                                           
+       33 +                                                              
+       34 +## 2. Punto de partida                                        
+       35 +                                                              
+       36 +### 2.1 Ficha del objetivo de la A03                          
+       37 +                                                              
+       38 +> **Qué debe contener.** La ficha del apartado 5.1 de tu A03, 
+          +con sus referencias `A03 OBT-xx`. Señala qué datos usarás como
+          + entrada de Shodan y FOCA. Si no entregaste la A03, construye 
+          +aquí una ficha mínima con las herramientas del Tema 3 y regíst
+          +ralas en el apartado 4.1.                                     
+       39 +                                                              
+       40 +| Campo | Dato | Referencia | Entrada para |                  
+     … 165 more lines (ctrl+o to expand)
+  ⎿  Created fork-entregas\entregas\roseteEirik\A04\registro-ia.md (+27 -0)
+       1 +# Registro de uso de inteligencia artificial · A04             
+       2 +                                                               
+       3 +> **Cómo se rellena**                                          
+       4 +>                                                              
+       5 +> Copia este archivo a tu carpeta `A04`, junto al informe, y tr
+         +abaja sobre la copia.                                          
+       6 +>                                                              
+       7 +> 1. Cada vez que uses IA, copia el bloque «Uso 1» y rellénalo 
+         +con el número siguiente.                                       
+       8 +> 2. Como evidencia, guarda una captura o exportación en la car
+         +peta `ia/` con el número del uso (`uso-01.png`, `uso-02.pdf`…),
+         + o pega el enlace para compartir la conversación.              
+       9 +> 3. Si no has usado IA, borra el bloque y escribe: «No he util
+         +izado inteligencia artificial».                                
+      10 +>                                                              
+      11 +> Nivel C: la IA puede usarse para aclarar conceptos, entender 
+         +la sintaxis de un filtro, resolver la instalación de FOCA o SQL
+         + Server Express, buscar ideas que después decides tú o revisar 
+         +la ortografía. No puede redactar el informe, hacer búsquedas en
+         + tu nombre, analizar tus resultados ni tomar decisiones. **No s
+         +e introducen en la IA** tus datos personales ni los resultados 
+         +de la obtención: metadatos, nombres, cuentas, direcciones IP, c
+         +apturas ni documentos.                                         
+      12 +>                                                              
+      13 +> Borra este recuadro antes de entregar.                       
+      14 +                                                               
+      15 +## Uso 1                                                       
+      16 +                                                               
+      17 +- **Herramienta y modelo:**                                    
+      18 +- **Para qué:**                                                
+      19 +- **Apartado del informe:**                                    
+      20 +- **Prompt, copiado tal cual:**                                
+      21 +                                                               
+      22 +  ```text                                                      
+      23 +                                                               
+      24 +  ```                                                          
+      25 +                                                               
+      26 +- **Qué hice con la respuesta:**                               
+      27 +- **Evidencia:** `ia/uso-01.png` o enlace a la conversación    
+  ⎿  (files that changed while this command ran, by the command or by
+     another process; a convenience view, not a review or audit of the
+     command)
+
+● Ahora escribo la guía de herramientas fuera del fork, para que no acabe en el
+  pull request.
+
+● Write(apuntes\A04-guia-herramientas.md)
+  ⎿  Wrote 307 lines to apuntes\A04-guia-herramientas.md
+       1 # Guía de herramientas para la A04
+       2
+       3 Apuntes de consulta personal. No forman parte de la entrega ni s
+         e copian en el informe. Resumen elaborado con IA (nivel C: aclar
+         ar conceptos y sintaxis), a partir de:
+       4
+       5 - `fork-entregas/actividades/A04-exposicion-tecnica-y-documental
+         /README.md` (enunciado)
+       6 - `documentation/contenidos/04-osint-tecnico-infraestructura-y-e
+         xposicion/` (README, herramientas, definiciones, Operación Delta
+     … +302 lines (~18 KB) (ctrl+o to expand)
+
+● He creado la carpeta de la A04 y una guía de herramientas para consultar
+  mientras redactas. No he escrito nada del informe, porque el nivel C de IA no
+  lo permite.
+
+  Estructura de la A04
+
+  Está creada en la rama A04/exposicion-tecnica-y-documental, que es en la que
+  ya estabas:
+
+  entregas/roseteEirik/A04/
+  ├── README.md        ← copia sin cambios de plantilla-respuesta.md
+  ├── registro-ia.md   ← copia sin cambios de registro-ia.md
+  ├── ia/              ← capturas del uso de IA (uso-01.png…)
+  └── evidencias/      ← EV-01.png, EV-02.png…
+
+  Git no sube carpetas vacías, así que ia/ y evidencias/ aparecerán en el pull
+  request cuando tengan archivos.
+
+  Guía de herramientas
+
+  apuntes/A04-guia-herramientas.md (../apuntes/A04-guia-herramientas.md)
+
+  Está fuera del fork para que no acabe en el pull request. No la copies en el
+  informe: la ha escrito la IA. Resume el enunciado, el Tema 4 y los conceptos
+  de los temas 1, 2, 3 y 7 que pide la plantilla:
+
+  - Shodan: filtros, facetas, cómo leer una ficha y la clasificación en tres
+    grupos.
+  - FOCA: instalación con SQL Server Express, procedimiento, alternativa con
+    ExifTool y cómo interpretar los metadatos.
+  - Maltego y fuentes de contraste: crt.sh, Censys y SecurityTrails.
+  - Conceptos: fiabilidad y credibilidad por separado, OPSEC, y la diferencia
+    entre exposición y vulnerabilidad.
+  - Penalizaciones fáciles de cometer.
+
+  Los temas 5 a 8 todavía no tienen contenido en la documentación.
+
+  Ojo con el HSE: es una entidad sanitaria y sufrió un incidente, así que se
+  aplican las reglas reforzadas.
+  - En Shodan solo puedes usar hostname:, ssl: y ssl.cert.subject.cn: sobre sus
+    dominios corporativos. No se permiten org:, net: ni búsquedas por producto.
+  - Solo puedes abrir fichas de servicios web o de correo.
+  - No puedes relacionar un hallazgo tuyo con el ataque de Conti si ninguna
+    fuente lo hace.
+  - En la A03 y en el PF excluiste las consultas DNS al HSE. Para contrastar,
+    usa solo fuentes pasivas.
+
+  Tres cosas que revisar antes de empezar
+
+  1. Hay cambios de la A03 sin guardar en la rama de la A04. Tienes
+     A03/README.md modificado y A03/evidencias/ sin añadir a git. Si los subes
+     con esta rama, el pull request tocará otra carpeta y te lo devolverán sin
+     revisar. Guárdalos con un commit en la rama a03-roseteEirik antes de
+     seguir. No lo he hecho yo.
+  2. La ficha 5.1 de tu A03 está vacía. El apartado 2.1 de la A04 tiene que
+     copiarla con sus referencias A03 OBT-xx, y de ella salen los dominios que
+     pondrás en Shodan y FOCA. El enunciado prohíbe editar la carpeta de la A03
+     cuando empiezas la A04, así que primero completa y cierra la A03.
+  3. Haz un commit del plan antes de la primera consulta. Rellena los apartados
+     2 y 3 antes de usar Shodan o FOCA. Si el historial no lo muestra, te restan
+     1 punto. Instala FOCA hoy: la entrega es el viernes 6 de noviembre a las
+     23:59.
+
+  Registro de IA: esta conversación cuenta como uso. Decláralo en
+  A04/registro-ia.md como Uso 1, con tu prompt copiado tal cual y una captura en
+  ia/uso-01.png. Lo explico en el apartado 11 de la guía.
