@@ -22,6 +22,7 @@ El nombre de la carpeta de entrega debe utilizar el código completo indicado en
 | `A02` | [Plan de investigación](A02-plan-de-investigacion/README.md) · en grupo | 2 | Lunes 12 de octubre de 2026, 12:15 |
 | `A03` | [Huella pública](A03-huella-publica/README.md) · individual | 3 | Viernes 30 de octubre de 2026, 23:59 |
 | `A04` | [Exposición técnica y documental](A04-exposicion-tecnica-y-documental/README.md) · individual, continuación de la A03 | 4 | Viernes 6 de noviembre de 2026, 23:59 |
+| `F01` | [Exploración guiada de la dark web y canal ético](F01-exploracion-dark-web/README.md) · actividad formativa en clase | 5 | En clase (sesión presencial) |
 
 
 ## Proyecto final individual
