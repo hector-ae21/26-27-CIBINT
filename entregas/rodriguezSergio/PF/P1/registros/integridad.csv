@@ -1,0 +1,2 @@
+id_evidencia,nombre_archivo,ruta_relativa,fuente_origen,fecha_captura,sha256,md5,observaciones
+NA,No aplica en PF-P1 (consulta documental en línea sin archivos locales preservados como evidencia),NA,F-01 a F-05,2026-11-09,NA,NA,Conforme a las instrucciones de 02-proceso-y-entregas.md se conservan los encabezados y se deja constancia de que en este avance solo se han consultado páginas públicas registradas por URL y fecha en fuentes.csv.
