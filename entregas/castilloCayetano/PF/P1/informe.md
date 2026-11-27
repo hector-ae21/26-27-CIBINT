@@ -65,9 +65,14 @@
 
 ### Datos, seguridad y condiciones de parada (Evaluación Legal y OPSEC)
 
-**Evaluación Legal:** El trabajo se basa estrictamente en Inteligencia de Fuentes Abiertas (OSINT) pasiva. Consultar repositorios técnicos, avisos de seguridad y bases de datos gubernamentales no vulnera normativas de protección de datos (RGPD) ni el Código Penal, dado que no se interactúa con sistemas ajenos ni se recopila Información Personal Identificable (PII) de víctimas. 
-**Evaluación OPSEC:** Para evitar la correlación de consultas y la exposición de la investigación (*leakage* de intenciones), las búsquedas en foros técnicos y repositorios se realizarán mediante redes privadas virtuales (VPN) y resolución DNS cifrada (DoH). No se ejecutarán scripts automáticos de recolección agresiva que puedan alertar a los administradores de los foros.
-**Condición de parada:** Si durante la recolección de información se detecta código de explotación *Zero-Day* funcional no divulgado o infraestructuras activas de Comando y Control (C2), se aplicará la parada técnica: se capturará el hallazgo de forma pasiva, se neutralizarán los enlaces y se consultará al profesorado antes de continuar.
+**Evaluación legal y manejo de datos:** La investigación se limita exclusivamente a la recolección pasiva de Inteligencia de Fuentes Abiertas (OSINT) sobre vulnerabilidades públicas. No se interactúa con infraestructura de terceros, no se realizan escaneos activos, no se recopila información personal identificable (PII) y queda expresamente excluida la descarga, apertura, ejecución o ingeniería inversa de código de explotación (PoC). Cualquier mención a la existencia de pruebas de concepto públicas se tomará únicamente de lo documentado por fuentes secundarias de análisis de amenazas, sin acceder al código fuente del *exploit*.
+
+**Medidas de OPSEC aplicadas al alcance:**
+*   **Separación de identidades y sesiones:** Las consultas se realizan desde un perfil de navegador dedicado exclusivamente a la práctica, sin iniciar sesión en cuentas personales ni universitarias.
+*   **Privacidad en la consulta:** Uso de conexión cifrada (VPN sin registros y DNS sobre HTTPS) para evitar la correlación de búsquedas en blogs técnicos y bases de datos públicas.
+*   **Neutralización de artefactos:** Cualquier indicador técnico potencialmente malicioso o URL sensible se neutralizará (*defanging*, p. ej., `hxxps://`) antes de incorporarse al informe o a los registros locales.
+
+**Condiciones de parada y procedimiento de consulta:** La recolección se detendrá de forma inmediata si aparece: (a) código de explotación funcional no divulgado (*Zero-Day*), (b) infraestructura activa de Comando y Control (C2), (c) datos confidenciales o personales de víctimas reales, o (d) un requisito de interacción directa con presuntos actores de amenazas. **Procedimiento:** al activarse una condición de parada **no se captura, copia ni descarga ningún contenido ni pantalla**; se cierra la consulta, se registra únicamente la categoría del incidente, la fecha/hora y la búsqueda que llevó a él en `registros/bitacora.csv`, y se consulta al profesorado por el canal privado antes de continuar.
 
 ## 4. Contexto y cronología
 
@@ -83,13 +88,27 @@ El caso de estudio se centra en el descubrimiento de fallos críticos en el moto
 
 El plan de recolección se basa en consultas a repositorios oficiales y técnicos. Cada fuente está seleccionada para responder directamente a una o varias Preguntas de Inteligencia (PI).
 
+La selección de fuentes se limita a OSINT pasivo, priorizando fuentes primarias (Proyecto PHP, CISA y NVD) frente a secundarias de análisis de amenazas (Snyk y Sygnia, evaluadas por separado al tratarse de organizaciones independientes). Se excluye el acceso directo a repositorios con código de explotación (PoC); cualquier mención a su existencia se recogerá únicamente a través de lo documentado por las fuentes secundarias. La fiabilidad de cada fuente y la credibilidad de sus afirmaciones se valoran por separado.
+
 | Fuente o grupo | Pregunta que cubre | Criterio de selección y evaluación | Limitación |
 |---|---|---|---|
-| F-01: PHP Group (Aviso Oficial) | PI-03 | **Fuente Primaria.** Autoridad máxima técnica sobre el lenguaje. | No analizan el comportamiento de los atacantes ni mencionan explícitamente el uso de IA. |
-| F-02: CISA / KEV Catalog | PI-02, PI-03 | **Fuente Primaria.** Agencia gubernamental con telemetría global validada. Alta fiabilidad. | Retraso en la actualización de TTPs específicos. |
-| F-03: Base de Datos NVD (NIST) | PI-02, PI-03 | **Fuente Primaria.** Repositorio oficial de vulnerabilidades (CVEs). | Solo provee métricas CVSS y enlaces; requiere análisis secundario. |
-| F-04: Informes Threat Intel (Snyk/Sygnia) | PI-01, PI-02 | **Fuente Secundaria.** Expertos que han analizado la evasión (CVE-2026-115560) y publicado sobre la IA. | Posible sesgo comercial o uso del término "IA" con fines de marketing. |
-| F-05: Repositorios GitHub (PoC) | PI-01, PI-02 | **Fuente Secundaria.** Permite verificar si existen *exploits* públicos y comparar el código. | El código puede ser falso o contener *malware* secundario; requiere neutralización. |
+| F-01: PHP Group (Aviso oficial y *Security Advisories*) | PI-01, PI-03 | **Fuente primaria.** Autoridad técnica directa sobre el código base y los parches. Fiabilidad de la fuente: Alta. | No documenta explotación activa ni TTPs de terceros; suele ofrecer poco detalle sobre las herramientas usadas por los descubridores. |
+| F-02: CISA (Alerta y Catálogo KEV) | PI-02, PI-03 | **Fuente primaria.** Agencia gubernamental con telemetría validada sobre explotación activa. Fiabilidad de la fuente: Alta. | Confirma explotación activa y plazos de mitigación, pero no atribuye actores ni detalla si los *exploits* se generaron con IA. |
+| F-03: NIST / NVD | PI-01, PI-02, PI-03 | **Fuente primaria.** Repositorio estandarizado de CVEs, métricas CVSS y referencias cruzadas. Fiabilidad de la fuente: Alta. | Puede sufrir retrasos en el enriquecimiento técnico y depende de referencias remitidas por terceros. |
+| F-04: Snyk Security Research | PI-01, PI-03 | **Fuente secundaria.** Proveedor especializado en seguridad de aplicaciones con análisis técnico del incidente. Fiabilidad de la fuente: Media-Alta; afirmaciones sobre IA pendientes de contraste. | Posible sesgo comercial o dependencia de terceros; debe comprobarse si sus afirmaciones sobre IA y `CVE-2026-115560` son propias o citadas. |
+| F-05: Sygnia Threat Reports | PI-01, PI-02, PI-03 | **Fuente secundaria.** Equipo de respuesta a incidentes e inteligencia de amenazas con reporte específico sobre `php2shell`. Fiabilidad de la fuente: Media-Alta; afirmaciones pendientes de contraste. | Telemetría propia no verificable de forma independiente y posible énfasis comercial. |
+
+### Plan de consultas
+
+| Fuente | Consulta concreta | Qué se busca | Pregunta que cubre |
+|---|---|---|---|
+| F-01: PHP Group | Revisión de `php.net/archive/2026.php#2026-10-21-5` y de los avisos `GHSA-w8hw-w9fx-j79w`, `GHSA-6wmf-4rv5-p3rp` y `GHSA-658j-r8rw-q6mx` en `github.com/php/php-src`. | Fechas exactas de publicación y parcheo, versiones afectadas/corregidas, mitigaciones oficiales, créditos de descubrimiento y relación técnica real entre `CVE-2026-109619` y `CVE-2026-115560`. | PI-01, PI-03 |
+| F-02: CISA | Consulta de la alerta del 21/10/2026 y filtrado en el catálogo KEV mediante `field_cve=CVE-2026-109618`, `field_cve=CVE-2026-109619` y comprobación de `CVE-2026-115560`. | Fecha exacta de inclusión en KEV, confirmación oficial de explotación activa, plazos de remediación y mitigaciones exigidas. | PI-02, PI-03 |
+| F-03: NIST / NVD | Consulta directa de las fichas `cve-2026-109618`, `cve-2026-109619` y `cve-2026-115560` en `nvd.nist.gov/vuln/detail/`. | Fechas de publicación y modificación, vectores CVSS, clasificación CWE y listado de referencias primarias asociadas. | PI-01, PI-02, PI-03 |
+| F-04: Snyk Security Research | Revisión del artículo `snyk.io/blog/php-patches-critical-unauthenticated-rces/` y trazado de las fuentes originales que cita. | Qué afirma exactamente sobre el papel de la IA, qué evidencias aporta (propias o heredadas), análisis de `CVE-2026-115560` y mitigaciones documentadas. | PI-01, PI-03 |
+| F-05: Sygnia Threat Reports | Revisión del reporte `sygnia.co/threat-reports-and-advisories/php2shell-...` buscando secciones de explotación, detección y atribución de descubrimiento. | Evidencias de explotación observada, menciones documentadas a PoC públicas (sin abrir código), recomendaciones de detección/mitigación y afirmaciones sobre el uso de IA. | PI-01, PI-02, PI-03 |
+
+Los registros detallados de valoración de fuentes y cada consulta ejecutada se conservan en `registros/fuentes.csv` y `registros/bitacora.csv`, respectivamente, usando identificadores correlativos (`F-01` a `F-05` para fuentes y `H-01` en adelante para hallazgos).
 
 ## 6. Resultados y evidencias
 

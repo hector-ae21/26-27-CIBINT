@@ -48,15 +48,15 @@ Recientemente, el 21 de octubre de 2026, se publicaron dos vulnerabilidades crí
 
 | Referencia | Autor u organización | Título y URL | Fecha de publicación | Fecha de consulta | Primaria o secundaria | Qué pregunta ayuda a responder |
 |---|---|---|---|---|---|---|
-| F-01 | PHP Group | [PHP 8.x Security Advisory - Core RCE vulnerabilities] (Enlace simulado) | 21/10/2026 | 09/11/2026 | Primaria | PI-03 |
-| F-02 | CISA / KEV Catalog | [Critical Vulnerabilities in PHP Require Immediate Patching] (Enlace simulado) | 26/10/2026 | 09/11/2026 | Primaria | PI-02, PI-03 |
-| F-03 | Snyk / Sygnia Research | [php2shell: Evasion analysis and the role of AI] (Enlace simulado) | 27/10/2026 | 09/11/2026 | Secundaria | PI-01, PI-02 |
+| F-01 | PHP Group | [PHP 8.x Security Advisory - Core RCE vulnerabilities] (https://github.com/php/php-src/security/advisories) | 21/10/2026 | 09/11/2026 | Primaria | PI-03 |
+| F-02 | CISA / KEV Catalog | [Critical Vulnerabilities in PHP Require Immediate Patching] (https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching) y (https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog)| 26/10/2026 | 09/11/2026 | Primaria | PI-02, PI-03 |
+| F-03 | Snyk / Sygnia Research | [php2shell: Evasion analysis and the role of AI] (https://snyk.io/blog/php-patches-critical-unauthenticated-rces/) y (https://www.sygnia.co/threat-reports-and-advisories/php2shell-two-critical-php-vulnerabilities-expose-web-servers-to-remote-code-execution/) | 27/10/2026 | 09/11/2026 | Secundaria | PI-01, PI-02 |
 
 ## 6. Plan de trabajo
 
 El desarrollo del proyecto se estructurará en los tres avances previstos, combinando el trabajo autónomo con el análisis en las sesiones prácticas:
 
-- **P1 (Planificación y Obtención):** Configuración del entorno de trabajo y recolección sistemática de información en fuentes abiertas (OSINT). Se identificarán los detalles técnicos de los CVEs asociados a PHP2Shell, los repositorios de GitHub con pruebas de concepto (PoC) y los boletines de seguridad de CISA. En clase, se ajustarán las consultas de búsqueda y se validará la calidad de las fuentes primarias frente a las secundarias.
+- **P1 (Planificación y Obtención):** Configuración del entorno de trabajo y recolección sistemática de información en fuentes abiertas (OSINT). Se identificarán los detalles técnicos de los CVEs asociados a PHP2Shell y los boletines de seguridad de CISA. En clase, se ajustarán las consultas de búsqueda y se validará la calidad de las fuentes primarias frente a las secundarias.
 - **P2 (Análisis y Estructuración):** Procesamiento de las evidencias obtenidas, extracción de Indicadores de Compromiso (IoCs) y mapeo de los comportamientos de los atacantes usando la matriz MITRE ATT&CK. En clase, se trabajará la justificación analítica para asegurar que cada hallazgo soporta adecuadamente una conclusión y se debatirán posibles sesgos de confirmación al evaluar si un ataque fue realmente generado con IA.
 - **P3 (Comunicación y Conclusiones):** Redacción final del informe, consolidación de las recomendaciones para el destinatario (equipo SOC/Respuesta a Incidentes) y elaboración del resumen ejecutivo. En clase, se someterán a revisión las limitaciones del análisis y la viabilidad técnica de las mitigaciones propuestas frente a la evasión de parches.
 
